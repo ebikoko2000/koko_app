@@ -1,0 +1,104 @@
+/* Aesthetic Background */
+body {
+  background: url("https://images.pexels.com/photos/169198/pexels-photo-169198.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") no-repeat center center/cover;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Auth Container */
+.auth-container {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 40px;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Title */
+.title {
+  font-size: 26px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+/* Auth Box */
+.auth-box {
+  background: rgba(255, 255, 255, 0.3);
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  transition: 0.3s ease-in-out;
+}
+
+.auth-box:hover {
+  transform: translateY(-2px);
+}
+
+/* Input Fields */
+.form-control {
+  margin-bottom: 10px;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  transition: 0.3s ease-in-out;
+}
+
+.form-control:focus {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Buttons */
+.btn {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 18px;
+  transition: 0.3s ease-in-out;
+  border: none;
+}
+
+.btn-success {
+  background: #28a745;
+}
+
+.btn-success:hover {
+  background: #218838;
+}
+
+.btn-primary {
+  background: #007bff;
+}
+
+.btn-primary:hover {
+  background: #0056b3;
+}
+
+/* Divider */
+.divider {
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  margin: 10px 0;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-10px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}

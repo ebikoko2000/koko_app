@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koko Planning - Weddings</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="styles_dashboard.css"> <!-- Integrated same styling -->
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="https://i.postimg.cc/bvw64KTS/wedding-planning.png" alt="Koko Planning Logo" class="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="dashboard.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">Weddings</a></li>
+                    <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="love_notes.html">Love Notes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="boutique.html">Boutique</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Logout Positioned in the Top Right -->
+    <div class="logout-container">
+        <button id="logoutBtn" class="btn btn-danger">Logout</button>
+    </div>
+
+    <!-- Weddings Page Content -->
+    <div class="container mt-5">
+        <h1 class="app-title text-center">✨ Wedding Plans ✨</h1>
+        <p class="text-center">Explore our exclusive wedding plans and arrangements.</p>
+
+        <!-- Flexbox Layout for Images + Table -->
+        <div class="wedding-plans-container">
+            
+            <!-- Left Images -->
+            <div class="wedding-images left">
+                <img src="https://cdn.pixabay.com/photo/2019/05/24/18/41/marriage-4226896_1280.jpg" alt="Wedding Image 1">
+                <img src="https://cdn.pixabay.com/photo/2021/07/05/09/35/bride-6388640_640.jpg" alt="Wedding Image 2">
+            </div>
+
+            <!-- Table Content -->
+            <div class="table-container">
+                <div class="scroll-container">
+                    <div class="scroll-section show">
+                        <!-- Table for displaying wedding data -->
+                        <div class="table-responsive">
+                            <table class="table wedding-table mt-4">
+                                <thead>
+                                    <tr>
+                                        <th>Sr.</th>
+                                        <th>Feature</th>
+                                        <th>Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="weddingTableBody">
+                                    <!-- Data will be inserted dynamically here -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bottom Image -->
+                <div class="bottom-image-container">
+                    <img src="https://cdn.pixabay.com/photo/2024/03/18/07/19/ai-generated-8640492_640.jpg" alt="Wedding Roses">
+                </div>
+            </div>
+
+            <!-- Right Images -->
+            <div class="wedding-images right">
+                <img src="https://cdn.pixabay.com/photo/2016/06/29/08/41/wedding-dresses-1486256_640.jpg" alt="Wedding Image 3">
+                <img src="https://cdn.pixabay.com/photo/2021/08/17/06/19/bride-6552057_640.jpg" alt="Wedding Image 4">
+            </div>
+
+        </div>
+    </div>
+
+     <!-- Footer -->
+     <footer class="footer mt-auto py-4">
+        <div class="container text-center">
+            <div class="social-icons mb-3">
+                <a href="#" class="me-3"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="me-3"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="me-3"><i class="fab fa-pinterest"></i></a>
+            </div>
+            <p class="mb-1">&copy; 2025 Koko Planning. All rights reserved.</p>
+            <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <script src="weddings.js"></script>
+</body>
+</html>

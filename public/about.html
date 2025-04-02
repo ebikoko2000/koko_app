@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Koko Planning</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="styles_dashboard.css"> 
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="https://i.postimg.cc/bvw64KTS/wedding-planning.png" alt="Koko Planning Logo" class="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="dashboard.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="weddings.html">Weddings</a></li>
+                    <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="love_notes.html">Love Notes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="boutique.html">Boutique</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="logout-container">
+        <button id="logoutBtn" class="btn btn-danger">Logout</button>
+    </div>
+
+    <!-- About Section -->
+    <div class="container mt-5 about-section" >
+        <h1 class="text-center section-title">About Us</h1>
+        
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <div class="about-box">
+                    <i class="fas fa-building icon"></i>
+                    <h3>Who We Are</h3>
+                    <p>Koko Planning is a premier wedding and event planning company.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="about-box">
+                    <i class="fas fa-bullseye icon"></i>
+                    <h3>Our Mission</h3>
+                    <p>To create unforgettable moments through thoughtful planning.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <div class="about-box">
+                    <i class="fas fa-heart icon"></i>
+                    <h3>Our Values</h3>
+                    <p>Creativity, integrity, professionalism, and passion.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="about-box">
+                    <i class="fas fa-users icon"></i>
+                    <h3>Meet the Team</h3>
+                    <p>A group of experienced planners dedicated to making events successful.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Team Section -->
+    <div class="container mt-5 team-section">
+        <h2 class="text-center section-title">Meet Our Team</h2>
+
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <div class="team-member">
+                    <img src="https://cdn.pixabay.com/photo/2024/05/28/17/52/woman-8794419_640.jpg" class="img-fluid rounded-circle">
+                    <h4>Sarah</h4>
+                    <p>Senior Event Planner</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="team-member">
+                    <img src="https://cdn.pixabay.com/photo/2023/10/27/10/28/woman-8344944_640.jpg" class="img-fluid rounded-circle">
+                    <h4>Aleese</h4>
+                    <p>Lead Wedding Designer</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="team-member">
+                    <img src="https://cdn.pixabay.com/photo/2022/02/15/18/04/woman-7015406_640.jpg" class="img-fluid rounded-circle">
+                    <h4>Chelsea</h4>
+                    <p>Event Coordinator</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer mt-auto py-4">
+        <div class="container text-center">
+            <div class="social-icons mb-3">
+                <a href="#" class="me-3"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="me-3"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="me-3"><i class="fab fa-pinterest"></i></a>
+            </div>
+            <p class="mb-1">&copy; 2025 Koko Planning. All rights reserved.</p>
+            <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById("logoutBtn").addEventListener("click", function () {
+        localStorage.removeItem("token");
+        alert("Logged out successfully");
+        window.location.href = "/";
+    });
+    </script>
+</body>
+</html>

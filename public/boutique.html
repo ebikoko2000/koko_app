@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boutique - Koko Planning</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="styles_dashboard.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="https://i.postimg.cc/bvw64KTS/wedding-planning.png" alt="Koko Planning Logo" class="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="dashboard.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="weddings.html">Weddings</a></li>
+                    <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="love_notes.html">Love Notes</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">Boutique</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Logout Positioned in the Top Right -->
+    <div class="logout-container">
+        <button id="logoutBtn" class="btn btn-danger">Logout</button>
+    </div>
+
+    <!-- Boutique Section -->
+    <div class="container mt-5 boutique">
+        <h1 class="text-center section-title"><i class="fas fa-shopping-bag"></i> Welcome to Brilliant Boutique</h1>
+        <p class="text-center intro">
+            We're <strong>Sarah and Chelsea</strong>, the magic makers behind Team Brilliant! Our shop is full of essentials made just for you – our fellow, empire-building creatives.
+        </p>
+
+        <!-- Product List -->
+        <div class="row">
+            <!-- Product 1 -->
+            <div class="col-md-6">
+                <div class="product-card">
+                    <img src="https://weddingplannerbusinesscoach.com/cdn/shop/files/brilliant-events-branding-2020-102_360x.jpg?v=1614338381" class="product-image">
+                    <h3><i class="fas fa-tags"></i> Picking the Perfect Pricing Model</h3>
+                    <p class="price"><i class="fas fa-dollar-sign"></i> USD 9,955.92</p>
+                    <button class="btn btn-primary"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="col-md-6">
+                <div class="product-card">
+                    <img src="https://weddingplannerbusinesscoach.com/cdn/shop/files/brilliant-events-branding-2020-14_360x.jpg?v=1614338381" class="product-image">
+                    <h3><i class="fas fa-envelope"></i> 16 Essential Email Responses for Event Planners</h3>
+                    <p class="price"><i class="fas fa-dollar-sign"></i> USD 13,938.28</p>
+                    <button class="btn btn-primary"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="col-md-6">
+                <div class="product-card">
+                    <img src="https://weddingplannerbusinesscoach.com/cdn/shop/files/brilliant-events-branding-2020-99_360x.jpg?v=1614338381" class="product-image">
+                    <h3><i class="fas fa-file-signature"></i> Vendor Contracts: Reviewing & Negotiating 101</h3>
+                    <p class="price"><i class="fas fa-dollar-sign"></i> USD 16,782.83</p>
+                    <button class="btn btn-primary"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="col-md-6">
+                <div class="product-card">
+                    <img src="https://cdn.pixabay.com/photo/2023/07/13/07/13/social-media-8124075_640.jpg" class="product-image">
+                    <h3><i class="fas fa-camera"></i> Instagram Stories Highlights Icons</h3>
+                    <p class="price"><i class="fas fa-dollar-sign"></i> USD 7,111.37</p>
+                    <button class="btn btn-primary"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <!-- Footer -->
+     <footer class="footer mt-auto py-4">
+        <div class="container text-center">
+            <div class="social-icons mb-3">
+                <a href="#" class="me-3"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="me-3"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="me-3"><i class="fab fa-pinterest"></i></a>
+            </div>
+            <p class="mb-1">&copy; 2025 Koko Planning. All rights reserved.</p>
+            <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <!-- Logout Script -->
+    <script>
+        document.getElementById("logoutBtn")?.addEventListener("click", function () {
+            localStorage.removeItem("token");
+            alert("Logged out successfully");
+            window.location.href = "/";
+        });
+    </script>
+
+</body>
+</html>

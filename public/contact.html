@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Koko Planning</title>
+    <link rel="stylesheet" href="styles_dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+<body>
+
+    <!-- Logout Positioned in the Top Right -->
+    <div class="logout-container">
+        <button id="logoutBtn" class="btn btn-danger">Logout</button>
+    </div>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>We’d love to hear from you! Feel free to reach out using the form below or visit us at our London office.</p>
+
+            <div class="contact-details">
+                <div class="detail">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p><strong>Our Office:</strong> 221B Baker Street, London, UK</p>
+                </div>
+                <div class="detail">
+                    <i class="fas fa-phone-alt"></i>
+                    <p><strong>Call Us:</strong> +44 20 7946 0958</p>
+                </div>
+                <div class="detail">
+                    <i class="fas fa-envelope"></i>
+                    <p><strong>Email:</strong> info@kokoplanning.com</p>
+                </div>
+                <div class="detail">
+                    <i class="fas fa-clock"></i>
+                    <p><strong>Working Hours:</strong> Mon-Fri: 9AM - 6PM, Sat-Sun: 10AM - 4PM</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leaflet Map -->
+    <div id="map"></div>
+
+    <!-- Contact Form -->
+    <section class="contact-form-section">
+        <div class="container">
+            <h2>Send Us a Message</h2>
+            <form id="contactForm">
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="email" placeholder="Your Email" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-pencil-alt"></i>
+                    <input type="text" id="subject" placeholder="Subject" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-comments"></i>
+                    <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+     <!-- Footer -->
+     <footer class="footer mt-auto py-4">
+        <div class="container text-center">
+            <div class="social-icons mb-3">
+                <a href="#" class="me-3"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="me-3"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="me-3"><i class="fab fa-pinterest"></i></a>
+            </div>
+            <p class="mb-1">&copy; 2025 Koko Planning. All rights reserved.</p>
+            <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Leaflet Map
+        var map = L.map('map').setView([51.5074, -0.1278], 12); // Center on London
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        var londonIcon = L.icon({
+            iconUrl: 'https://cdn.pixabay.com/photo/2020/08/06/10/30/fashion-5467549_640.png',
+            iconSize: [50, 50], // Increased size
+            iconAnchor: [25, 50], 
+            popupAnchor: [0, -50]
+        });
+
+        L.marker([51.5074, -0.1278], { icon: londonIcon })
+            .addTo(map)
+            .bindPopup("<b>Koko Planning</b><br>221B Baker Street, London")
+
+            document.getElementById("logoutBtn").addEventListener("click", function () {
+                localStorage.removeItem("token");
+                alert("Logged out successfully");
+                window.location.href = "/";
+            });
+    </script>
+
+</body>
+</html>
